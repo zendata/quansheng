@@ -200,7 +200,7 @@ endif
 OBJCOPY = arm-none-eabi-objcopy
 SIZE = arm-none-eabi-size
 
-AUTHOR_STRING ?= VK3RQ
+AUTHOR_STRING := VK3RQ
 # the user might not have/want git installed
 # can set own version string here (max 7 chars)
 ifneq (, $(shell $(WHERE) git))
@@ -211,7 +211,7 @@ ifneq (, $(shell $(WHERE) git))
 endif
 
 # Forcing one for me
-VERSION_STRING := Graham
+VERSION_STRING := GC
 
 # If there is still no VERSION_STRING we need to make one.
 # It is needed for the firmware packing script
