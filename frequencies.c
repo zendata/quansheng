@@ -239,7 +239,7 @@ int32_t TX_freq_check(const uint32_t Frequency)
 	// return -1;
 
 	// I am allowed any TX frequency
-	return 0;
+	return -1;
 }
 
 int32_t RX_freq_check(const uint32_t Frequency)
