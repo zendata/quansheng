@@ -29,17 +29,17 @@ ENABLE_BOOT_BEEPS             ?= 0
 ENABLE_SHOW_CHARGE_LEVEL      ?= 0
 ENABLE_REVERSE_BAT_SYMBOL     ?= 0
 ENABLE_NO_CODE_SCAN_TIMEOUT   ?= 1
-ENABLE_AM_FIX                 ?= 0
+ENABLE_AM_FIX                 ?= 1
 ENABLE_SQUELCH_MORE_SENSITIVE ?= 1
 ENABLE_FASTER_CHANNEL_SCAN    ?= 1
 ENABLE_RSSI_BAR               ?= 1
 ENABLE_AUDIO_BAR              ?= 1
 ENABLE_COPY_CHAN_TO_VFO       ?= 1
-ENABLE_SPECTRUM               ?= 0
+ENABLE_SPECTRUM               ?= 1
 ENABLE_REDUCE_LOW_MID_TX_POWER?= 0
 ENABLE_BYP_RAW_DEMODULATORS   ?= 0
 ENABLE_BLMIN_TMP_OFF          ?= 0
-ENABLE_SCAN_RANGES            ?= 0
+ENABLE_SCAN_RANGES            ?= 1
 
 # ---- DEBUGGING ----
 ENABLE_AM_FIX_SHOW_DATA       ?= 0
@@ -211,7 +211,7 @@ ifneq (, $(shell $(WHERE) git))
 endif
 
 # Forcing one for me
-VERSION_STRING := No_TXs
+VERSION_STRING := No_TX
 
 # If there is still no VERSION_STRING we need to make one.
 # It is needed for the firmware packing script
