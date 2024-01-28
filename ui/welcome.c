@@ -43,15 +43,18 @@ void UI_DisplayWelcome(void)
 {
 	char WelcomeString0[16];
 	char WelcomeString1[16];
+	char WelcomeString2[16];
 
 	memset(gStatusLine,  0, sizeof(gStatusLine));
 	UI_DisplayClear();
+
 
 	if (gEeprom.POWER_ON_DISPLAY_MODE == POWER_ON_DISPLAY_MODE_NONE || gEeprom.POWER_ON_DISPLAY_MODE == POWER_ON_DISPLAY_MODE_FULL_SCREEN) {
 		ST7565_FillScreen(0xFF);
 	} else {
 		memset(WelcomeString0, 0, sizeof(WelcomeString0));
 		memset(WelcomeString1, 0, sizeof(WelcomeString1));
+		memset(WelcomeString2, 0, sizeof(WelcomeString2));
 
 		if (gEeprom.POWER_ON_DISPLAY_MODE == POWER_ON_DISPLAY_MODE_VOLTAGE)
 		{
@@ -69,6 +72,8 @@ void UI_DisplayWelcome(void)
 
 		UI_PrintString(WelcomeString0, 0, 127, 0, 10);
 		UI_PrintString(WelcomeString1, 0, 127, 2, 10);
+		strcpy(WelcomeString2, "eVox FM");
+		UI_PrintString(WelcomeString2, 0, 127, 3, 10);
 		UI_PrintStringSmallNormal(Version, 0, 128, 6);
 
 		ST7565_BlitStatusLine();  // blank status line
