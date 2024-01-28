@@ -14,7 +14,7 @@ ENABLE_ALARM                  ?= 0
 ENABLE_TX1750                 ?= 0
 ENABLE_PWRON_PASSWORD         ?= 0
 ENABLE_DTMF_CALLING           ?= 1
-ENABLE_FLASHLIGHT             ?= 0
+ENABLE_FLASHLIGHT             ?= 1
 
 # ---- CUSTOM MODS ----
 ENABLE_BIG_FREQ               ?= 1
@@ -211,7 +211,7 @@ ifneq (, $(shell $(WHERE) git))
 endif
 
 # Forcing one for me
-VERSION_STRING := "-Tx -Scan"
+VERSION_STRING := "-Tx -Spec"
 
 # If there is still no VERSION_STRING we need to make one.
 # It is needed for the firmware packing script
