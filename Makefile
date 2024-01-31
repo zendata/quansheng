@@ -211,7 +211,7 @@ ifneq (, $(shell $(WHERE) git))
 endif
 
 # Forcing one for me
-VERSION_STRING := "-Tx -Spec"
+VERSION_STRING := "-Tx -SpAn"
 
 # If there is still no VERSION_STRING we need to make one.
 # It is needed for the firmware packing script
